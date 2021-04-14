@@ -18,6 +18,7 @@ function! fzf_mru#actions#options() abort
   if !empty(get(g:, 'fzf_mru_no_sort', 0))
     let options .= '--no-sort '
   endif
+  let options .= "--preview 'bat --style=numbers --color=always {}'"
   return options
 endfunction
 
